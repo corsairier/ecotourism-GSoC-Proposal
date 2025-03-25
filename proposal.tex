@@ -1,0 +1,415 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{tocloft}
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{longtable}
+
+
+\setmainfont{Linux Libertine O}
+
+\definecolor{customgray}{HTML}{e1e3dc}
+\newcommand{\code}[1]{\colorbox{customgray}{\texttt{#1}}}
+
+\geometry{a4paper, margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+
+
+\fancyfoot[L]{\includegraphics[width=1.0cm]{R_logo.svg.png}}
+\fancyfoot[R]{Page {\thepage}}
+
+
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}.}
+
+
+\renewcommand{\cftsecfont}{\normalfont}              
+\renewcommand{\cftsubsecfont}{\normalfont}
+\renewcommand{\cftsubsubsecfont}{\normalfont}
+
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesection{\arabic{section}.\hspace{-0.55em}}
+\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}.\hspace{-0.55em}}
+
+
+\makeatletter
+\newcommand{\dottedleader}{\leavevmode\leaders\hbox to 1ex{\hss.\hss}\hfill}
+\makeatother
+
+
+\renewcommand{\cftsecleader}{\dottedleader}
+\renewcommand{\cftsubsecleader}{\dottedleader}
+\renewcommand{\cftsubsubsecleader}{\dottedleader}
+
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\titleformat{\section}
+  {\normalfont\fontsize{18}{24}\bfseries} 
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\fontsize{15.5}{20}\bfseries} 
+  {\thesubsection}{1em}{}
+
+\begin{document}
+\fontsize{13.2}{15}\selectfont 
+
+\begin{titlepage}
+    \centering
+    \vspace*{4cm}
+    
+    \begin{center}
+        \includegraphics[width=0.5\textwidth]{gsoc_logo.png} \hspace{1.5cm}
+        \raisebox{40mm}{\includegraphics[width=0.3\textwidth]{R_logo.svg.png}} 
+    \end{center}
+    
+    \vspace{1.5cm}
+    
+    {\fontsize{22}{34}\selectfont \textcolor{orange}{Google Summer of Code Proposal}}\\[1.5cm]
+    {\fontsize{30}{60}\selectfont\baselineskip=1.2cm
+        \bfseries
+        Ecotourism: Data Package Containing Tourism Records and Endangered Wildlife Reports\\
+    }
+
+    
+    \vfill
+    
+    {\large DEV GOEL}\\
+    \vspace{0.2cm}
+    {\large 18 March 2025}
+
+\end{titlepage}
+
+\newpage
+
+
+\tableofcontents
+\newpage
+
+\section{Project Info}
+\begin{itemize}
+    \item \textbf{Project Title:} Ecotourism: Data Package Containing Tourism Records and Endangered Wildlife Reports
+    \item \textbf{Short Title:} Ecotourism Data Package
+    \item \textbf{Project Page URL: } \faLink~{\uline{\href{https://github.com/rstats-gsoc/gsoc2025/wiki/ecotourism:-data-package-containing-tourism-records-and-endangered-wildlife-reports}{Ecotourism Project Page}}}
+\end{itemize}
+
+
+\section{Bio}
+I am Dev Goel, a B.Tech student at IIT BHU majoring in Pharmaceutical Engineering. My programming journey began in 7th grade as a self-taught enthusiast, building fun projects like a neural network-powered Flappy Bird game. Over the years, I have expanded my skills in Python and explored data science and machine learning. \\
+
+My interest in R sparked during an exploratory project on pharmacodynamics and pharmacokinetics, where I analyzed medicine-related data. While exploring data science tools, I discovered R’s rich ecosystem for statistical analysis and visualization, which drew me deeper into the language. When I came across the Ecotourism data package project in GSoC, I saw it as an excellent opportunity to combine my programming skills with geospatial data visualization and ecological analysis.
+\\ \\
+Beyond data science, I have hands-on experience in software and web development, equipping me with the technical versatility to handle data manipulation, visualization, and package development effectively. I am excited about the chance to collaborate with experienced professionals, learn from their expertise, and contribute meaningfully to the R community.
+
+\section{Contact Information}
+{\bfseries Name:} Dev Goel \\[0.2cm]
+{\bfseries Postal Address:} 729, Satish Dhawan Hostel, Indian Institute of Technology (BHU), Varanasi, India, 221005 \\[0.2cm]
+{\bfseries Phone Number:} {\uline{\href{tel:+91-8968998040}{+91-8968998040}}} \\[0.2cm]
+{\bfseries Email(s):} {\uline{\href{mailto:dgoel2099@gmail.com}{dgoel2099@gmail.com}}, \uline{\href{mailto:dev.goel.phe23@itbhu.ac.in}{dev.goel.phe23@itbhu.ac.in}}} \\[0.2cm]
+{\bfseries Other Communication Channels:} Zoom, Google Meet, {\uline{\href{https://wa.me/918968998040}{Whatsapp}}}
+
+\section{Affiliation}
+{\bfseries Institution:} Indian Institute of Technology (Banaras Hindu University) [IIT (BHU)], Varanasi, India \\[0.2cm]
+{\bfseries Program:} B.Tech. in Pharmaceutical Engineering and Technology \\[0.2cm]
+{\bfseries Stage of Completion:} 2nd Year, Expected Graduation: 2027 \\[0.2cm]
+{\bfseries Contact to verify:} {\uline{\href{https://www.iitbhu.ac.in/dept/phe/people/ashishphe}{Dr. Ashish Kumar Agrawal}} (Email: \uline{\href{mailto: ashish.phe@iitbhu.ac.in}{ashish.phe@iitbhu.ac.in}})}
+
+\section{Schedule Conflicts}
+I will be fully available throughout the summer, as my college will be on summer vacation from May 10 to July 10. During this period, I will be able to dedicate 30–35 hours per week to the project. However, I will be traveling home at the start of the summer and back to college at the end, which will make me unavailable for 3–4 days during each of these transitions. To compensate for this lost time, I plan to work extra hours during the remaining weeks of the summer. \\
+
+If the project extends beyond the summer, I will still be able to contribute 25 hours per week alongside my college coursework. I can dedicate approximately 3 hours on weekdays (3 × 5) and 5 hours on weekends (2 × 5). This ensures that I will continue to meet project milestones and contribute consistently, even after the summer coding period.
+
+\section{Project Mentors}
+{\bfseries Evaluating Mentor:} Dianne Cook (Email: \uline{\href{mailto:dicook@monash.edu}{dicook@monash.edu}}) \\[0.2cm]
+{\bfseries Co-Mentor:} Lyn Cook (Email: \uline{\href{mailto:l.cook@uq.edu.au}{l.cook@uq.edu.au}}) \\[0.2cm]
+I have been in touch with the mentors via email. They have provided valuable feedback on my project tests and have been very supportive throughout the process. I am looking forward to working with them on this project.
+
+\section{Coding Plan and Methods}
+
+In order to successfully complete the Ecotourism data package, I will follow a structured and methodical coding plan. This will include data acquisition, processing, geospatial matching, testing, and visualization. Additionally, I will incorporate advanced features to make the package more robust, efficient, and scalable.
+
+\subsection{Data Acquisition and Preprocessing}
+The project will begin by acquiring and preprocessing ecotourism and wildlife records from multiple sources:
+\begin{itemize}
+    \item \textbf{GBIF API:} To fetch wildlife occurrence data.
+    \item \textbf{eBird API:} For bird sighting records.
+    \item \textbf{OSM API:} To obtain spatial data for mapping and visualization.
+
+These sources may change along with the project requirements, and I will adapt the data acquisition process accordingly.
+\end{itemize}
+
+\textbf{Preprocessing Tasks:}
+\begin{itemize}
+    \item Cleaning and standardizing timestamps and coordinates.
+    \item Removing duplicates and handling missing values.
+    \item Performing initial exploratory data analysis (EDA) to identify patterns.
+\end{itemize}
+
+\subsection{Automated Data Refresh Pipeline}
+To keep the data package consistently updated with the latest records, I will implement an automated data refresh pipeline using GitHub Actions.
+
+\textbf{Feature:}
+\begin{itemize}
+    \item The pipeline will periodically fetch the latest data from GBIF, eBird, and OSM APIs.
+    \item The refreshed data will be automatically committed to the GitHub repository.
+\end{itemize}
+
+\textbf{Technical Details:}
+\begin{itemize}
+    \item Use GitHub Actions with a scheduled CRON job that triggers weekly or monthly.
+    \item Implement data validation checks to prevent erroneous data from being committed.
+\end{itemize}
+
+\subsection{Geospatial Matching and Temporal Analysis}
+I will implement advanced geospatial matching techniques using the R packages:
+\begin{itemize}
+    \item \code{sf}: For geospatial operations such as joins, intersections, and buffering.
+    \item \code{osmdata}: To extract and match locations based on OpenStreetMap data.
+\end{itemize}
+
+\textbf{Technical Tasks:}
+\begin{itemize}
+    \item Perform spatial joins to link wildlife sightings with tourism hotspots.
+    \item Apply temporal matching functions to combine records by date.
+    \item Use distance thresholds to handle mismatched or imprecise coordinates.
+\end{itemize}
+
+\subsection{Parallelized Data Processing}
+To improve the performance of geospatial joins and temporal operations, I will implement parallelized processing using:
+\begin{itemize}
+    \item \code{future.apply} for parallelized operations in R.
+    \item \code{parallel} for running multiple processes simultaneously.
+\end{itemize}
+
+\textbf{Benefits:}
+\begin{itemize}
+    \item Significantly reduces the processing time for large datasets.
+    \item Enhances the overall efficiency of the package.
+\end{itemize}
+
+\subsection{Automated CRAN Compliance Checks}
+To ensure the package is always CRAN-compliant, I will set up automated compliance checks using GitHub Actions.
+
+\textbf{Feature:}
+\begin{itemize}
+    \item The workflow will validate CRAN compliance on every push.
+    \item This ensures that the package passes all required checks before submission.
+\end{itemize}
+
+\textbf{Technical Details:}
+\begin{itemize}
+    \item Use \code{rcmdcheck} GitHub Action:
+    \begin{itemize}
+        \item \code{- uses: r-lib/actions/check-r-package@v2}
+    \end{itemize}
+    \item Automatically validate documentation, dependencies, and code integrity.
+\end{itemize}
+
+\subsection{Challenges and Contingency Plan}
+During the development of this project, I anticipate potential challenges, and I have devised a contingency plan to overcome them.
+
+\textbf{Data Limitations:}
+\begin{itemize}
+    \item Some APIs may impose rate limits or temporary unavailability.
+    \item \textbf{Solution:} Use caching and batching techniques to reduce API requests and prevent rate-limiting issues.
+\end{itemize}
+
+\textbf{Geospatial Challenges:}
+\begin{itemize}
+    \item Mismatched or inaccurate coordinates could cause errors in geospatial joins.
+    \item \textbf{Solution:} Implement distance thresholds and apply fuzzy matching algorithms to handle imprecise data.
+\end{itemize}
+
+\textbf{Backup Plan:}
+\begin{itemize}
+    \item In case of API failures or unavailability, I will use local CSV datasets as a fallback to ensure continuous development without interruptions.
+\end{itemize}
+
+\subsection{8. Future-Proofing and Scalability}
+To make the package scalable and future-proof, I will:
+\begin{itemize}
+    \item Use modular code architecture for easy maintenance and extension.
+    \item Include detailed documentation and inline comments for future contributors.
+    \item Make the codebase easily extensible for adding new data sources or functionality.
+\end{itemize}
+
+
+
+\section{Timeline}
+\begin{longtable}{|p{3.5cm}|p{3cm}|p{3cm}|p{6.5cm}|}
+\hline
+\textbf{Phase} & \textbf{Timeline} & \textbf{Deliverable} & \textbf{Details and Milestones} \\
+\hline
+
+\textbf{Org Application Deadline} & 11 Feb 2025 & N/A & GSoC organization application deadline. \\
+\hline
+
+\textbf{Organizations Announced} & 27 Feb 2025 & N/A & Official GSoC organizations announced. Start contacting potential mentors. \\
+\hline
+
+\textbf{Pre GSoC Period} & 8 Apr - 8 May 2025 & N/A & Discuss project ideas with the mentors and build upon their earlier findings \\
+\hline
+
+\textbf{Bonding Period} & 8 May – 2 June 2025 & Environment setup, project planning & 
+\begin{itemize}
+    \item Set up development environment.
+    \item Identify and collect sample datasets from GBIF, eBird, and OSM.
+    \item Discuss project scope and expectations with mentors.
+    \item Create a detailed technical roadmap.
+\end{itemize} \\
+\hline
+
+\textbf{Coding Phase 1} & 2 June – 18 July 2025 & Data acquisition \& cleaning & 
+\begin{itemize}
+    \item Implement data retrieval functions from GBIF, eBird, and OSM.
+    \item Clean and standardize data (timestamps, coordinates, missing values).
+    \item Perform exploratory data analysis (EDA) to identify patterns.
+    \item Push working prototype to GitHub with basic cleaning functions.
+\end{itemize} \\
+\hline
+
+\textbf{Midterm Evaluation} & 18 July 2025 & Midterm evaluation by mentors & 
+Mentors evaluate project progress, functionality, and code quality. \\
+\hline
+
+\textbf{Coding Phase 2} & 19 July – 8 August 2025 & Spatial \& temporal matching & 
+\begin{itemize}
+    \item Implement spatial matching functions using \code{sf} and \code{osmdata}.
+    \item Perform temporal matching with dynamic date ranges.
+    \item Optimize and test geospatial joins for efficiency.
+    \item Create basic plots and maps for verification.
+\end{itemize} \\
+\hline
+
+\textbf{Coding Phase 3} & 9 August – 1 September 2025 & Visualization \& dashboard & 
+\begin{itemize}
+    \item Implement an interactive Shiny dashboard (if approved).
+    \item Perform optimizations and bug fixes.
+    \item Create vignette documentation with usage examples.
+\end{itemize} \\
+\hline
+
+\textbf{Final Evaluation Period} & 1 – 8 September 2025 & Final evaluation by mentors & 
+\begin{itemize}
+    \item Submit the complete project to mentors for review.
+    \item Ensure CRAN compliance.
+\end{itemize} \\
+\hline
+
+\textbf{Final Submission \& CRAN Release} & 9 – 16 September 2025 & Submit package to CRAN & 
+\begin{itemize}
+    \item Officially submit the package to CRAN.
+    \item Write the final project report summarizing the development process.
+\end{itemize} \\
+\hline
+
+\textbf{Extended Deadline (if needed)} & 17 November 2025 & Optional final submission & 
+Only if there are significant delays or issues (not recommended by GSoC). \\
+\hline
+
+\end{longtable}
+
+
+\section{Management of Coding Project}
+
+In order to ensure the smooth and efficient development of the Ecotourism data package, I will follow a structured coding management plan. This includes thorough testing strategies, regular updates through a dedicated blog, ongoing contributions even after GSoC, and clear communication with mentors.
+
+\subsection{Testing Strategy}
+To maintain the reliability and accuracy of the codebase, I will implement a comprehensive testing strategy, including:
+
+\begin{itemize}
+    \item \textbf{Unit Tests:} I will write unit tests using the \code{testthat} package to verify the correctness of individual functions. Each function will have corresponding test cases to validate its output against expected results.
+    \item \textbf{Integration Tests:} To ensure smooth interaction between different modules, I will implement integration tests. This will verify that spatial and temporal matching functions produce consistent and accurate results.
+    \item \textbf{Continuous Integration (CI):} I will use GitHub Actions to automate testing on every push, ensuring code quality and early detection of issues.
+    \item \textbf{Performance Tests:} I will benchmark the package to ensure it handles large datasets efficiently and remains performant under varying conditions.
+\end{itemize}
+
+\subsection{Weekly Blog Updates}
+Throughout the GSoC period, I will maintain a dedicated blog where I will post weekly updates, including:
+\begin{itemize}
+    \item Detailed descriptions of my progress, technical challenges faced, and solutions implemented.
+    \item Code snippets and examples to demonstrate the functionality of the package.
+    \item Visualizations and sample outputs showcasing the evolving features of the project.
+\end{itemize}
+The blog will also serve as the final project report, making it easier for the mentors to track my progress.
+
+\subsection{Post-GSoC Contributions}
+My contributions to this project will not end with GSoC. After the official coding period, I plan to:
+\begin{itemize}
+    \item Continue enhancing the package by adding new features, improving performance, and fixing any reported bugs.
+    \item Contribute to the R community by collaborating on future improvements and helping maintain the package.
+    \item Engage with the R community through forums and GitHub discussions to support users of the package.
+\end{itemize}
+This ongoing involvement will ensure the long-term sustainability and growth of the project.
+
+\subsection{Communication and Collaboration}
+To keep the mentors informed about my progress and receive timely feedback, I will:
+\begin{itemize}
+    \item Hold weekly Zoom or Google Meet meetings with my mentors to discuss progress, challenges, and next steps.
+    \item Use email and real-time messaging platforms for regular communication and status updates.
+    \item Share milestones and deliverables through GitHub and document them on the blog.
+\end{itemize}
+
+
+
+\section{Test Submissions}
+
+As part of the GSoC application process, I completed three test submissions (Easy, Medium, and Hard), which involved geospatial data visualization, density estimation, and geocoding of SA2 regions.
+
+\subsection{Easy Test:}
+
+In this task, I used the \code{galah} R package to fetch occurrence records from the Atlas of Living Australia. I created a visualization by plotting the occurrences on a map of Australia using:
+\begin{itemize}
+    \item \code{ggplot2} for creating the map.
+    \item \code{ggspatial} to add spatial context and scale bars.
+\end{itemize}
+
+The final plot displayed the occurrence data accurately, demonstrating the ability to visualize geospatial data effectively.
+
+\subsection{Medium Test:}
+
+This task involved retrieving platypus occurrence data in Victoria, Australia, and associating it with weather data from the nearest weather station. The steps included:
+\begin{itemize}
+    \item \textbf{Density Estimation}: Applied Kernel Density Estimation (KDE) to identify the most densely populated platypus sighting area, highlighted in purple on the map.
+    \item \textbf{Weather Data Retrieval}: Retrieved daily temperature and precipitation data for 2024 from the nearest weather station using the \code{GSODR} package.
+    \item \textbf{Visualization}: The final map displayed:
+    \begin{itemize}
+        \item Blue Dots: Individual platypus sightings.
+        \item Purple Region: KDE-based densest area.
+        \item Green Dot: Nearest weather station.
+    \end{itemize}
+\end{itemize}
+
+This task demonstrated my ability to integrate spatial analysis with real-world environmental data.
+
+\subsection{Hard Test:}
+
+In the hard test, I performed geocoding on Statistical Area Level 2 (SA2) regions by calculating their centroids using polygon coordinates from an \code{ESRI} shapefile. The steps involved:
+
+\begin{itemize}
+    \item \textbf{Dataset Cleaning}: Downloaded the domestic trips dataset and removed unnecessary metadata for consistency.
+    \item \textbf{Polygon Extraction}: Used \code{GeoPandas} in Python to extract the centroid coordinates of SA2 regions.
+    \item \textbf{Merging Datasets}: Combined the centroid coordinates with the domestic trips dataset to create a spatially-enriched dataset.
+\end{itemize}
+
+The final dataset contained:
+\begin{itemize}
+    \item Domestic trip statistics.
+    \item Corresponding SA2 region centroid coordinates.
+\end{itemize}
+
+
+
+\end{document}
