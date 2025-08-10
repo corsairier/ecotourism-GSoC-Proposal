@@ -17,8 +17,13 @@ int binarySearch(const vector<int>& arr, int target) {
 }
 
 int main() {
-    vector<int> arr = {1, 3, 5, 7, 9, 11, 13};
-    int target = 7;
+    int n; cin>>n;
+    vector<int> arr(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> arr[i];
+    }
+    int target;
+    cin >> target;
     int index = binarySearch(arr, target);
     if (index != -1)
         cout << "Found at index: " << index << endl;
